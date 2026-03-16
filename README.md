@@ -6,15 +6,18 @@ This project demonstrates a basic SOC analyst home lab built using VirtualBox, U
 ![Splunk Detection](screenshots/login-fail-splunk-ubuntu)
 
 ## Lab Architecture
+
+```
 Kali Linux (Attacker)
-│
-│ SSH Attempts
-▼
+        │
+        │  SSH Attempts
+        ▼
 Ubuntu Server (Target + Log Source)
-│
-│ Log Forwarding
-▼
+        │
+        │  Log Forwarding
+        ▼
 Splunk SIEM (Detection & Analysis)
+```
 
 ## Objective
 Build a hands-on security lab that demonstrates the ability to:
