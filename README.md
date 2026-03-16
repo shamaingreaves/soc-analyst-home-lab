@@ -1,9 +1,12 @@
 # SOC Analyst Home Lab - Splunk Detection Project
 
 ## Project Overview
-This project demonstrates a basic SOC analyst home lab built using VirtualBox, Ubuntu, Kali Linux, and Splunk. The goal of the lab was to simulate suspicious authentication activity and detect it through SIEM log analysis.
+This project demonstrates a SOC analyst home lab built using VirtualBox, Ubuntu, Kali Linux, and Splunk. The lab simulates suspicious authentication activity and demonstrates how a SIEM can detect failed SSH login attempts.
 
-![Splunk Detection](screenshots/vms-running.png)
+<p align="center">
+<img src="screenshots/kali-vm-running.png" width="45%">
+<img src="screenshots/ubuntu-vm-running.png" width="45%">
+</p>
 
 ## Lab Architecture
 
@@ -90,26 +93,23 @@ This demonstrates how SIEM platforms can be used to detect suspicious authentica
 
 ## Screenshots
 
-### Splunk Dashboard Showing Ubuntu Logs
-![Splunk Dashboard](screenshots/splunk-dashboard-ubuntu.png)
+### Splunk Enterprise Running
+![Splunk Running](screenshots/splunk-running.png)
 
-### Initial Recon from Kali VM terminal
-![Kali Reconnaissance](screenshots/recon-kali.png)
+### Network Connectivity Test from Kali (Ping)
+![Ping Test](screenshots/recon-ping.png)
 
-### Reconnaissance Logs Observed in Splunk (Ubuntu VM)
-![Ubuntu Log Verification](screenshots/recon-ubuntu.png)
+### Port Scan Reconnaissance Using Nmap
+![Nmap Scan](screenshots/recon-nmap.png)
 
-### Login Failure on Kali VM terminal
-![SSH Brute Force From Kali](screenshots/login-fail-kali.png)
+### SSH Authentication Attack from Kali
+![SSH Attack](screenshots/login-fail-kali.png)
 
-### Failed SSH Login Observed on Ubuntu Server
+### Failed SSH Login Recorded on Ubuntu Server
 ![Failed Login Recorded on Ubuntu](screenshots/login-fail-ubuntu.png)
 
 ### Failed SSH Login Detected in Splunk
-![Splunk Detection Query Results](screenshots/login-fail-splunk-ubuntu.png)
-
-### Attack Activity Confirmed in Splunk
-![Attack Confirmation in Splunk](screenshots/attack-confirm-splunk.png)
+![Splunk Detection](screenshots/login-fail-splunk.png)
 
 ## Future Improvements
 
