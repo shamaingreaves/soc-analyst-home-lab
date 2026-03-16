@@ -43,7 +43,7 @@ Example command used:
 
 ```bash
 ssh fakeuser@192.168.56.101
-
+```
 ---
 
 ## Screenshots
