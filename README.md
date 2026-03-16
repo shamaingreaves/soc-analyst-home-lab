@@ -94,25 +94,25 @@ This demonstrates how SIEM platforms can be used to detect suspicious authentica
 ![Virtual Machines](screenshots/vms-running.png)
 
 ### Splunk dashboard
-![Virtual Machines](screenshots/splunk-dashboard-ubuntu.png)
+![Splunk Dashboard](screenshots/splunk-dashboard-ubuntu.png)
 
 ### Initial Recon from Kali VM terminal
-![Virtual Machines](screenshots/recon-kali.png)
+![Kali Reconnaissance](screenshots/recon-kali.png)
 
 ### Recon log from Splunk on Ubuntu1 VM
-![Virtual Machines](screenshots/recon-ubuntu.png)
+![Ubuntu Log Verification](screenshots/recon-ubuntu.png)
 
 ### Login Failure on Kali VM terminal
-![Virtual Machines](screenshots/login-fail-kali.png)
+![SSH Brute Force From Kali](screenshots/login-fail-kali.png)
 
 ### Login Failure on Ubuntu1 Terminal
-![Virtual Machines](screenshots/login-fail-ubuntu.png)
+![Failed Login Recorded on Ubuntu](screenshots/login-fail-ubuntu.png)
 
 ### Login Failure on Ubuntu1 Splunk log
-![Virtual Machines](screenshots/login-fail-splunk-ubuntu.png)
+![Splunk Detection Query Results](screenshots/login-fail-splunk-ubuntu.png)
 
 ### Attacker Confirmation on Ubuntu Splunk
-![Virtual Machines](screenshots/attack-confirm-splunk.png)
+![Attack Confirmation in Splunk](screenshots/attack-confirm-splunk.png)
 
 ## Future Improvements
 
