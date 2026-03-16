@@ -77,6 +77,15 @@ Example command used:
 ```bash
 ssh fakeuser@192.168.56.101
 ```
+
+## Incident Summary
+
+During testing, multiple failed SSH authentication attempts were generated from the Kali Linux attacker machine targeting the Ubuntu server.
+
+These attempts were recorded in the Ubuntu authentication logs and successfully ingested into Splunk. Splunk searches were then used to identify and aggregate the failed login activity.
+
+This demonstrates how SIEM platforms can be used to detect suspicious authentication behavior and support security investigations.
+
 ---
 
 ## Screenshots
