@@ -1,7 +1,7 @@
 # SOC Analyst Home Lab - Splunk Detection Project
 
 ## Project Overview
-This project demonstrates a SOC analyst home lab built using VirtualBox, Ubuntu, Kali Linux, and Splunk. The lab simulates suspicious authentication activity and demonstrates how a SIEM can detect failed SSH login attempts.
+This project demonstrates a SOC analyst home lab built using VirtualBox, Ubuntu, Kali Linux, and Splunk. The lab simulates suspicious authentication activity and demonstrates a simple SOC investigation workflow from reconnaissance to SIEM detection.
 
 <p align="center">
 <img src="screenshots/kali-vm-running.png" width="45%">
@@ -83,7 +83,7 @@ ssh fakeuser@192.168.56.101
 
 ## Incident Summary
 
-During testing, multiple failed SSH authentication attempts were generated from the Kali Linux attacker machine targeting the Ubuntu server.
+The authentication logs show repeated failed login attempts originating from the Kali Linux attacker machine (192.168.56.102) targeting the Ubuntu server (192.168.56.101).
 
 These attempts were recorded in the Ubuntu authentication logs and successfully ingested into Splunk. Splunk searches were then used to identify and aggregate the failed login activity.
 
@@ -91,7 +91,7 @@ This demonstrates how SIEM platforms can be used to detect suspicious authentica
 
 ---
 
-## Screenshots
+## SOC Investigation Walkthrough
 
 ### Splunk Enterprise Running
 ![Splunk Running](screenshots/splunk-running.png)
@@ -117,3 +117,28 @@ This demonstrates how SIEM platforms can be used to detect suspicious authentica
 - Create Splunk dashboards for authentication monitoring
 - Simulate additional attack techniques such as port scanning and brute-force attacks
 - Expand the lab with additional monitored hosts
+- Implement alerting rules in Splunk to automatically detect repeated failed authentication attempts
+
+## Detection Rule
+
+To identify suspicious authentication activity, a Splunk search query was created to detect repeated failed SSH login attempts recorded in the system authentication logs.
+
+### Detection Logic
+The rule searches for failed SSH authentication events within the indexed Ubuntu system logs.
+
+Example detection query:
+
+```spl
+index=soc_lab "Failed password"
+| stats count by host, source
+```
+
+### Detection Purpose
+This query helps identify:
+
+- Repeated authentication failures
+- Potential brute-force login attempts
+- Suspicious login behavior originating from attacker systems
+
+### Investigation Outcome
+Using this detection query, multiple failed login attempts from the Kali Linux attacker machine were successfully identified within Splunk. The events were traced back to the Ubuntu server authentication logs, confirming that the attack activity was properly logged and detected by the SIEM platform.
