@@ -3,6 +3,8 @@
 ## Project Overview
 This project demonstrates a basic SOC analyst home lab built using VirtualBox, Ubuntu, Kali Linux, and Splunk. The goal of the lab was to simulate suspicious authentication activity and detect it through SIEM log analysis.
 
+![Splunk Detection](screenshots/login fail splunk_ubuntu.png)
+
 ## Objective
 Build a hands-on security lab that demonstrates the ability to:
 - Deploy a virtual lab environment
@@ -41,3 +43,31 @@ Example command used:
 
 ```bash
 ssh fakeuser@192.168.56.101
+
+---
+
+## Screenshots
+
+### VMs shown up and running
+![Virtual Machines](screenshots/VMs.png)
+
+### Splunk dashboard
+![Virtual Machines](screenshots/Splunk dashboard_ubuntu.png)
+
+### Initial Recon from Kali VM terminal
+![Virtual Machines](screenshots/Recon_kali.png)
+
+### Recon log from Splunk on Ubuntu1 VM
+![Virtual Machines](screenshots/Recon_Ubuntu.png)
+
+### Login Failure on Kali VM terminal $
+
+
+### Login Failure on Ubuntu1 Terminal
+![Virtual Machines](screenshots/login fail_ubuntu.png)
+
+### Login Failure on Ubuntu1 Splunk log
+![Virtual Machines](screenshots/login fail splunk_ubuntu.png)
+
+### Attacker Confirmation on Ubuntu Splunk
+![Virtual Machines](screenshots/Attacker Confirmation Splunk_Ubuntu)
