@@ -3,7 +3,7 @@
 ## Project Overview
 This project demonstrates a basic SOC analyst home lab built using VirtualBox, Ubuntu, Kali Linux, and Splunk. The goal of the lab was to simulate suspicious authentication activity and detect it through SIEM log analysis.
 
-![Splunk Detection](screenshots/login-fail-splunk-ubuntu)
+![Splunk Detection](screenshots/login-fail-splunk-ubuntu.png)
 
 ## Lab Architecture
 
@@ -91,28 +91,28 @@ This demonstrates how SIEM platforms can be used to detect suspicious authentica
 ## Screenshots
 
 ### VMs shown up and running
-![Virtual Machines](screenshots/vms-running)
+![Virtual Machines](screenshots/vms-running.png)
 
 ### Splunk dashboard
-![Virtual Machines](screenshots/splunk-dashboard-ubuntu)
+![Virtual Machines](screenshots/splunk-dashboard-ubuntu.png)
 
 ### Initial Recon from Kali VM terminal
-![Virtual Machines](screenshots/recon-kali)
+![Virtual Machines](screenshots/recon-kali.png)
 
 ### Recon log from Splunk on Ubuntu1 VM
-![Virtual Machines](screenshots/recon-ubuntu)
+![Virtual Machines](screenshots/recon-ubuntu.png)
 
 ### Login Failure on Kali VM terminal $
-![Virtual Machines](screenshots/login-fail-kali)
+![Virtual Machines](screenshots/login-fail-kali.png)
 
 ### Login Failure on Ubuntu1 Terminal
-![Virtual Machines](screenshots/login-fail-ubuntu)
+![Virtual Machines](screenshots/login-fail-ubuntu.png)
 
 ### Login Failure on Ubuntu1 Splunk log
-![Virtual Machines](screenshots/login-fail-splunk-ubuntu)
+![Virtual Machines](screenshots/login-fail-splunk-ubuntu.png)
 
 ### Attacker Confirmation on Ubuntu Splunk
-![Virtual Machines](screenshots/atk-confim-splunk)
+![Virtual Machines](screenshots/atk-confim-splunk.png)
 
 ## Future Improvements
 
