@@ -90,16 +90,13 @@ This demonstrates how SIEM platforms can be used to detect suspicious authentica
 
 ## Screenshots
 
-### VMs shown up and running
-![Virtual Machines](screenshots/vms-running.png)
-
 ### Splunk dashboard
 ![Splunk Dashboard](screenshots/splunk-dashboard-ubuntu.png)
 
 ### Initial Recon from Kali VM terminal
 ![Kali Reconnaissance](screenshots/recon-kali.png)
 
-### Recon log from Splunk on Ubuntu1 VM
+### Recon log from Splunk on Ubuntu VM
 ![Ubuntu Log Verification](screenshots/recon-ubuntu.png)
 
 ### Login Failure on Kali VM terminal
