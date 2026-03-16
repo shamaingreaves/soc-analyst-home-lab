@@ -1,9 +1,20 @@
-# SOC Analyst Home Lab
+# SOC Analyst Home Lab - Splunk Detection Project
 
 ## Project Overview
 This project demonstrates a basic SOC analyst home lab built using VirtualBox, Ubuntu, Kali Linux, and Splunk. The goal of the lab was to simulate suspicious authentication activity and detect it through SIEM log analysis.
 
 ![Splunk Detection](screenshots/login-fail-splunk-ubuntu)
+
+## Lab Architecture
+Kali Linux (Attacker)
+│
+│ SSH Attempts
+▼
+Ubuntu Server (Target + Log Source)
+│
+│ Log Forwarding
+▼
+Splunk SIEM (Detection & Analysis)
 
 ## Objective
 Build a hands-on security lab that demonstrates the ability to:
@@ -14,11 +25,30 @@ Build a hands-on security lab that demonstrates the ability to:
 - Investigate suspicious events using SIEM queries
 
 ## Lab Environment
-- **Virtualization:** VirtualBox
-- **Target VM:** Ubuntu
-- **Attacker VM:** Kali Linux
-- **SIEM:** Splunk Enterprise
-- **Network Configuration:** NAT + Host-Only Adapter
+| Component | Technology |
+|-----------|------------|
+| Virtualization | VirtualBox |
+| Attacker Machine | Kali Linux |
+| Target Machine | Ubuntu Server |
+| SIEM Platform | Splunk Enterprise |
+| Network Configuration | NAT + Host-Only Adapter |
+
+## Key Splunk Queries
+
+Detect failed SSH login attempts:
+
+```spl
+index=soc_lab "Failed password"
+```
+Show failed login attempts:
+```spl
+index=soc_lab "Failed password"
+| stats count by host, source
+```
+View logs in Splunk
+```spl
+index=soc_lab
+```
 
 ## Network Architecture
 - **Ubuntu VM**
@@ -71,3 +101,10 @@ ssh fakeuser@192.168.56.101
 
 ### Attacker Confirmation on Ubuntu Splunk
 ![Virtual Machines](screenshots/atk-confim-splunk)
+
+## Future Improvements
+
+- Integrate Suricata IDS for network-based detection
+- Create Splunk dashboards for authentication monitoring
+- Simulate additional attack techniques such as port scanning and brute-force attacks
+- Expand the lab with additional monitored hosts
