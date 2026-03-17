@@ -142,3 +142,11 @@ This query helps identify:
 
 ### Investigation Outcome
 Using this detection query, multiple failed login attempts from the Kali Linux attacker machine were successfully identified within Splunk. The events were traced back to the Ubuntu server authentication logs, confirming that the attack activity was properly logged and detected by the SIEM platform.
+
+# Author
+
+Shamain Greaves  
+Cybersecurity Analyst Portfolio
+
+GitHub Portfolio:  
+https://github.com/shamaingreaves/cybersecurity-portfolio
